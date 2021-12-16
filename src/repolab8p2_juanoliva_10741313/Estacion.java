@@ -1,11 +1,16 @@
 package repolab8p2_juanoliva_10741313;
-public class Estacion {
+
+import java.io.Serializable;
+
+public class Estacion implements Serializable{
     private String nombreEstacion;
     private double x;
     private double y;
     private double distancia;
+    
+    private static final long SerialVersionUID=1l;
 
-    public Estacion() {
+    public Estacion(){
     }
 
     public Estacion(String nombreEstacion, double x, double y, double distancia) {

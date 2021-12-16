@@ -1,15 +1,18 @@
 package repolab8p2_juanoliva_10741313;
 
 import java.awt.Color;
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Bus {
+public class Bus implements Serializable{
 
     private String placa;
     private String marca;
     private Color color;
     private ArrayList<Estacion> listaEstaciones = new ArrayList<Estacion>();
     private double velocidad;
+    
+    private static final long SerialVersionUID=2l;
 
     public Bus() {
     }

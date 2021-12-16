@@ -46,6 +46,16 @@ public class VentanaPrinicipal extends javax.swing.JFrame {
         jt_VelocidadBus_Agregar = new javax.swing.JTextField();
         jb_AgregarBus = new javax.swing.JButton();
         jc_ColorBus_Agregar = new javax.swing.JComboBox<>();
+        jd_AgregarEstaciones = new javax.swing.JDialog();
+        jLabel6 = new javax.swing.JLabel();
+        jSeparator2 = new javax.swing.JSeparator();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jf_CoordenadaY_Agregar = new javax.swing.JFormattedTextField();
+        jf_CoordenadaX_Agregar = new javax.swing.JFormattedTextField();
+        jt_NombreEstacion_Agregar = new javax.swing.JTextField();
+        jb_AgregarEstacion = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -130,6 +140,75 @@ public class VentanaPrinicipal extends javax.swing.JFrame {
                 .addContainerGap(47, Short.MAX_VALUE))
         );
 
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel6.setText("Agregar Estaciones");
+
+        jLabel7.setText("Nombre");
+
+        jLabel8.setText("Coordenada X");
+
+        jLabel9.setText("Coordenada Y");
+
+        jf_CoordenadaY_Agregar.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter()));
+
+        jf_CoordenadaX_Agregar.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter()));
+
+        jb_AgregarEstacion.setText("Agregar Estacion");
+        jb_AgregarEstacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_AgregarEstacionActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jd_AgregarEstacionesLayout = new javax.swing.GroupLayout(jd_AgregarEstaciones.getContentPane());
+        jd_AgregarEstaciones.getContentPane().setLayout(jd_AgregarEstacionesLayout);
+        jd_AgregarEstacionesLayout.setHorizontalGroup(
+            jd_AgregarEstacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_AgregarEstacionesLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(jd_AgregarEstacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel6)
+                    .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jd_AgregarEstacionesLayout.createSequentialGroup()
+                        .addGroup(jd_AgregarEstacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel7))
+                        .addGap(18, 18, 18)
+                        .addGroup(jd_AgregarEstacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jf_CoordenadaX_Agregar)
+                            .addComponent(jt_NombreEstacion_Agregar)))
+                    .addGroup(jd_AgregarEstacionesLayout.createSequentialGroup()
+                        .addComponent(jLabel9)
+                        .addGap(18, 18, 18)
+                        .addGroup(jd_AgregarEstacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jb_AgregarEstacion)
+                            .addComponent(jf_CoordenadaY_Agregar))))
+                .addContainerGap(72, Short.MAX_VALUE))
+        );
+        jd_AgregarEstacionesLayout.setVerticalGroup(
+            jd_AgregarEstacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_AgregarEstacionesLayout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jd_AgregarEstacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(jt_NombreEstacion_Agregar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jd_AgregarEstacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(jf_CoordenadaX_Agregar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jd_AgregarEstacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel9)
+                    .addComponent(jf_CoordenadaY_Agregar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29)
+                .addComponent(jb_AgregarEstacion)
+                .addContainerGap(28, Short.MAX_VALUE))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jButton1.setText("Agregar Bus");
@@ -196,6 +275,28 @@ public class VentanaPrinicipal extends javax.swing.JFrame {
         jd_AgregarBus.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jb_AgregarEstacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_AgregarEstacionActionPerformed
+        Estacion e = new Estacion();
+        String nombreEstacion = jt_NombreEstacion_Agregar.getText();
+        boolean v1 = !nombreEstacion.isEmpty();
+        boolean v2 = !jf_CoordenadaX_Agregar.getText().isEmpty();
+        boolean v3 = !jf_CoordenadaX_Agregar.getText().isEmpty();
+
+        boolean validacion = v1&v2&v3;
+        if (validacion) {
+            double x = (double) jf_CoordenadaX_Agregar.getValue();
+            double y = (double) jf_CoordenadaX_Agregar.getValue();
+            
+            e.setNombreEstacion(nombreEstacion);
+            e.setX(x);
+            e.setY(y);
+            JOptionPane.showMessageDialog(jd_AgregarEstaciones, "La estacion ha sido agregada exitosamente");
+        }else{
+            JOptionPane.showMessageDialog(jd_AgregarEstaciones, "Revise los datos ingresados");
+        }
+        
+    }//GEN-LAST:event_jb_AgregarEstacionActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -238,11 +339,21 @@ public class VentanaPrinicipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JButton jb_AgregarBus;
+    private javax.swing.JButton jb_AgregarEstacion;
     private javax.swing.JComboBox<String> jc_ColorBus_Agregar;
     private javax.swing.JDialog jd_AgregarBus;
+    private javax.swing.JDialog jd_AgregarEstaciones;
+    private javax.swing.JFormattedTextField jf_CoordenadaX_Agregar;
+    private javax.swing.JFormattedTextField jf_CoordenadaY_Agregar;
     private javax.swing.JTextField jt_MarcaBus_Agregar;
+    private javax.swing.JTextField jt_NombreEstacion_Agregar;
     private javax.swing.JTextField jt_PlacaBus_Agregar;
     private javax.swing.JTextField jt_VelocidadBus_Agregar;
     // End of variables declaration//GEN-END:variables
